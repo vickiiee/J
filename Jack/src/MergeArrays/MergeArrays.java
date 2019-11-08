@@ -47,12 +47,8 @@ public class MergeArrays {
 			
 			for(int j = 0; j < userInput*2; j++) {
 				if(mergedArray[j]!=0 && mergedArray[j]== element1) {
-					//System.out.println("Dup: " + element1);
+					System.out.println("Dup: " + element1);
 					ele1InMergedArray = true;
-				}
-				if(mergedArray[j]!=0 && mergedArray[j]== element2) {
-					//System.out.println("Dup: " + element2);
-					ele2InMergedArray = true;
 				}
 			}
 
@@ -61,6 +57,12 @@ public class MergeArrays {
 				mergedArrayIndex++;
 			}
 
+			for(int j = 0; j < userInput*2; j++) {
+				if(mergedArray[j]!=0 && mergedArray[j]== element2) {
+					System.out.println("Dup: " + element2);
+					ele2InMergedArray = true;
+				}
+			}
 			if (ele2InMergedArray == false) {
 				mergedArray[mergedArrayIndex] = element2;
 				mergedArrayIndex++;
